@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghasilan Penjualan Tiket</title>
+</head>
+<body>
+    <script>
+        const jumlahTiketPerKelas = 50;
+
+        let tiketTerjualVIP = 40;
+        let tiketTerjualEksekutif = 43;
+        let tiketTerjualEkonomi = 35;
+
+        const hargaTiketVIP = 50000 * tiketTerjualVIP;
+        const hargaTiketEksekutif = 40000 * tiketTerjualEksekutif;
+        const hargaTiketEkonomi = 30000 * tiketTerjualEkonomi;
+
+        let keuntunganVIP, keuntunganEksekutif, keuntunganEkonomi;
+        
+        if (tiketTerjualVIP >= 35) {
+            keuntunganVIP = hargaTiketVIP * (25 / 100);
+        } else if (tiketTerjualVIP >= 20 && tiketTerjualVIP < 35) {
+            keuntunganVIP = hargaTiketVIP * (15 / 100);
+        } else {
+            keuntunganVIP = hargaTiketVIP * (5 / 100);
+        }
+
+        if (tiketTerjualEksekutif >= 40) {
+            keuntunganEksekutif = hargaTiketEksekutif * (20 / 100);
+        } else if (tiketTerjualEksekutif >= 20 && tiketTerjualEksekutif < 40) {
+            keuntunganEksekutif = hargaTiketEksekutif * (10/ 100);
+        } else {
+            keuntunganEksekutif = hargaTiketEksekutif * (2 / 100);
+        }
+
+        keuntunganEkonomi = hargaTiketEkonomi * (7 / 100);
+
+        let totalKeuntungan = keuntunganVIP + keuntunganEksekutif + keuntunganEkonomi;
+        let totalHargaTiket = hargaTiketVIP + hargaTiketEksekutif + hargaTiketEkonomi;
+        let totalTiket = tiketTerjualVIP + tiketTerjualEksekutif + tiketTerjualEkonomi;
+
+        console.log("Keuntungan tiket dari kelas VIP: Rp" + keuntunganVIP);
+        console.log("Keuntungan tiket dari kelas Eksekutif: Rp" + keuntunganEksekutif);
+        console.log("Keuntungan tiket dari kelas Ekonomi: Rp" + keuntunganEkonomi);
+        console.log("Keuntungan secara keseluruhan: Rp" + totalKeuntungan);
+        console.log("Total harga tiket secara keseluruhan: Rp" + totalHargaTiket);
+        console.log("Jumlah tiket per kelas: " + jumlahTiketPerKelas);
+        console.log("Total tiket secara keseluruhan: " + totalTiket)
+        
+    </script>
+</body>
+</html>
